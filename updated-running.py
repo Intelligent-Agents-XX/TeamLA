@@ -11,7 +11,7 @@ def knn(dataframe, k, history, gross_history):
     list = dataframe["Song Name"].values.tolist()
     for now in gross_history:
       list.remove(now)
-    if song1:
+    if song1 and command != "skip-next":
       list.remove(song1)
 
     upcoming = []

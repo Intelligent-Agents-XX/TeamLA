@@ -1,3 +1,5 @@
+#this only updates first row not the entire datagrame don't know why
+#this is just a skeleton to approach the main problem
 import pandas as pd
 import gspread
 import df2gspread as d2g

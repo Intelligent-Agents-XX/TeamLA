@@ -37,7 +37,7 @@ def knn(dataframe, k, history, gross_history):
 
     return upcoming
 
-def farthest(dataframe, k, history):
+def farthest(dataframe, k, history, gross_history):
 
     avg_coordinates = []
     for dim in space:
@@ -189,6 +189,7 @@ while True:
         song1, song2 = knn(df, 2, recent_history, gross_history)
 
         if dislikes > 2:
+            total_predictions+=1
             current_song=farthest(df,1,recent_history, gross_history)
             recent_history = [current_song]
             song1, song2 = knn(df,2,recent_history, gross_history)
